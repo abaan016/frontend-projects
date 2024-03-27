@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Seet Alert -->
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+  <!-- Pre Loader -->
+  <div class="container2">
+    <h1 class="my-4 fw-bold text-warning">Tic Tac Toe <br> Game Loading</h1>
+    <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+      <circle cx="170" cy="170" r="160" stroke="#E2007C" />
+      <circle cx="170" cy="170" r="135" stroke="#404041" />
+      <circle cx="170" cy="170" r="110" stroke="#E2007C" />
+      <circle cx="170" cy="170" r="85" stroke="#404041" />
+    </svg>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Heading -->
+    <h1 class="display-4 my-4 fw-bold text-warning">Tic Tac Toe</h1>
+    <div class="container">
+      <!-- Game Box -->
+      <div class="game">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+      </div>
+      <!-- End Game Box -->
+    </div>
+    <!-- Buttons -->
+    <button id="reset-btn" onclick="resetGame()" class="btn btn-outline-warning fw-bold p-2 me-3">Reset Game</button>
+    <button id="new-btn" onclick="newGame()" class="btn btn-warning fw-bold p-2">New Game</button>
+  </main>
+
+
+  <!-- footer -->
+  <footer class="bg-transparent text-light text-center text-lg-start mt-4">
+    <div class="text-center p-3">
+      © 2024 All Rights are Reserved:
+      <a class="text-white" href="https://www.linkedin.com/in/aban-ali-b45804246/">Aban Ali</a>
+    </div>
+  </footer>
+
+  <!-- My js  -->
+  <script src="main.js"></script>
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
