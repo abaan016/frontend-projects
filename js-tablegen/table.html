@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Table Generator</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 my-5">
+                <form class="form">
+                    <div class="form-group">
+                        <input type="text" name="tablenumber" id="tablenumber" class="form-control" placeholder="Enter a table number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="start" id="start" class="form-control" placeholder="Enter a table start number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="end" id="end" class="form-control" placeholder="Enter a table end number">
+                    </div>
+                    <button class="btn btn-primary btn-block mt-2" onclick="generate()" id="gen">Generate</button>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-6 my-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Generated Table</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableOutput">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div> -->
+    </div>
+    
+
+
+
+<script src="table.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
