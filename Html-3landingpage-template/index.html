@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+<title>Nature</title>
+
+<style>
+
+*
+{
+    outline: none !important;
+    scroll-behavior: smooth;
+}
+body
+{
+    font-family: 'Poppins', sans-serif ;
+}
+header
+{
+    position: relative;
+    z-index: 1000000;
+}
+p
+{
+    font-size: 1.15rem;
+}
+.navbar
+{
+    background: transparent !important;
+    transition: 0.5s;
+}
+.navbar.scrolled
+{
+    background: #000 !important;
+    transition: 0.5s;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link 
+{
+    color: #000;
+    background: #fff;
+}
+.navbar-light .navbar-nav .active>.nav-link:hover
+{
+color: #000;
+}
+.navbar-light .navbar-nav .nav-link 
+{
+    color: rgba(255,255,255,.8);
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus
+{
+    color: rgba(255,255,255,1);
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:visited
+{
+    color: rgba(255,255,255,.8);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.banner
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(imgs/front\ bg.jpg);
+    background-size: cover;
+    margin-bottom: 0;
+}
+.banner:before,
+.sec2:before,
+.contact:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(#000 transparent);
+    pointer-events: none;
+}
+.banner:after
+.sec2:after,
+.contact:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(360deg #000 transparent);
+    pointer-events: none;
+}
+.height100p
+{
+    height: 100vh;
+}
+.h100
+{
+    height: 100%;
+}
+.contentBox
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+.contentBox h1
+{
+    font-weight: 800;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 5rem;
+}
+.contentBox p
+{
+    color: #fff;
+    font-size: 1.3rem;
+}
+.sec1
+{
+    padding: 100px 0;
+    background: #000;
+}
+.headerText
+{
+    color: #fff;
+}
+.headerText h2
+{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.placeBox
+{
+    position: relative;
+    max-width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #000;
+    margin-top: 30px;
+}
+.placeBox .imgBx
+{
+    width: 100%;
+    height: 100%;
+} 
+.placeBox .imgBx img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.placeBox .content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-end;
+}
+.placeBox .content h3
+{
+    position: relative;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, .95);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+.placeBox .content h3 span
+{
+    font-size: 16px;
+    font-weight: 500;
+}
+.sec2
+{
+    position: relative;
+    background: url(imgs/ban3.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.sec2 h2
+{
+font-weight: 800;
+color: #fff;
+text-transform: uppercase;
+font-size: 4.5rem;
+}
+.btnD1
+{
+    border: 2px solid #fff;
+    color: #000;
+    background: #fff;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-size: 1.15rem;
+    outline: none;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.blog
+{
+position: relative;
+padding: 100px 0;
+background: #000;
+}
+.blogpost
+{
+position: relative;
+width: 100%;
+margin-top: 30px;
+background: #fff;
+}
+.blogpost .imgBx
+{
+    height: 400px;
+}
+.blogpost .imgBx img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blogpost .content
+{
+    padding: 15px;
+}
+.blogpost .content h1
+{
+    margin: 0;
+    padding: 0 0 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.btnD2,
+.btnD2:hover
+{
+    background-color: #262626;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    float: right;
+}
+.contact
+{
+    position: relative;
+    padding: 100px 0;
+    background: url(imgs/c22.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+.contact form
+{
+    position: relative;
+    z-index: 1000;
+}
+.contact .form-control
+{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    height: 50px;
+    border-radius: 0;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    font-size: 1.25rem;
+}
+.contact .form-control:focus,
+.contact .form-control:hover
+{
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: none;
+}
+.contact .textarea
+{
+    min-height: 100px;
+}
+.contact label
+{
+    color: #fff;
+    font-size: 1.25rem;
+}
+.contact label
+{
+    color: #fff;
+    font-size: 1.25rem;
+}
+footer
+{
+    background: #000;
+    padding: 50px 0 0;
+}
+.sci
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sci li
+{
+    list-style: none;
+    margin: 0 20px;
+}
+.sci li a
+{
+color: #777;
+font-size: 2em;
+transition: 0.5s;
+}
+.sci li a:hover
+{
+    color: #fff;
+}
+.cpryt
+{
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+}
+.cpryt a,
+.cpryt a:hover
+{
+    color: #fff;
+}
+@media (min-width: 992px)
+{
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+}
+@media (max-width: 992px)
+{
+    .navbar-light .navbar-toggler
+    {
+        background: #fff;
+        border-radius: 0;
+    }
+    .banner
+    {
+        min-height: 100vh;
+        padding: 100px 0;
+    }
+    .contentBox h1,
+    .sec2 h2
+    {
+        font-size: 2rem;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link 
+    {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    }
+    .sec1
+    {
+        padding: 20px 0;
+    }
+     .headerText h2
+    {
+        font-size: 2rem;
+    }
+    .blog
+    {
+        padding: 20px 0;
+    }
+    .blogpost .imgBx
+    {
+        height: 200px;
+    }
+    .contact .form-control
+    {
+        height: 40px;
+        border: 1px solid #fff;
+    }
+    .btnD1
+    {
+        padding: 10px 40px;
+        margin-top: 10px;
+    }
+    footer
+    {
+        background: #000;
+        padding: 0px 0 20px;
+    }
+    .sci li 
+    {
+        list-style: none;
+        margin: 0 10px;
+    }
+    .sci li a
+    {
+        color: #777;
+        font-size: 1.5rem;
+        transition: 0.5s;
+    }
+    .sec2
+    {
+        height: auto;
+        padding: 40px 0;
+    }
+}
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body data-spy="scroll"  data-target=".navbar" data-offset="50">
+
+    <!-- navbar start -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top scrolled">
+        <a class="navbar-brand" href="#">Nature</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav  ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#Home">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Explore">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Advanture">Advanture</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+</header>
+    <!-- navbar end -->
+
+    <div class="jumbotron jumbotron-fluid height100p banner" id="Home">
+        <div class="container h100">
+         <div class="contentBox h100">
+            <div>
+                <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Undiscovered Beauty</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Undiscovered Beauty>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa dolorum, exercitationem voluptas iste est rerum laboriosam reprehenderit eaque recusandae repellat in, atque labore, ipsa maiores. Rerum nam ea amet!</p>
+            </div>
+         </div>
+        </div>
+      </div>
+
+      <section class="sec1" id="Explore"> 
+            <div class="container">
+                <div class="row">
+                    <div class="offset-sm-2 col-sm-8">
+                        <div class="headerText text-center">
+                            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Exlore The World</h2>
+                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quo mollitia, aut possimus fugit quisquam, ipsa minus eligendi labore, fugiat minima quod. Laboriosam, expedita sint. Doloribus nulla dolores dicta fugiat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="placeBox" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                            <div class="imgBx">
+                                <img src="imgs/ex11.jpg" class="img-fluid">
+                            </div>
+                            <div class="content">
+                                <h3>Place Name <br><span>Country</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div class="placeBox" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                            <div class="imgBx">
+                                <img src="imgs/ex2.jpg" class="img-fluid">
+                            </div>
+                            <div class="content">
+                                <h3>Place Name <br><span>Country</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div class="placeBox" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                            <div class="imgBx">
+                                <img src="imgs/ex33.jpg" class="img-fluid">
+                            </div>
+                            <div class="content">
+                                <h3>Place Name <br><span>Country</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </section>
+
+      <section class="sec2" id="Advanture">
+        <div class="container h100">
+            <div class="contentBox h100">
+                <div>
+                    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Advanture is Everywhere</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur corrupti et pariatur autem, eligendi nobis tempore blanditiis quas, possimus voluptate eius temporibus, accusamus minus voluptatum mollitia odit saepe delectus!</p>
+                    <a href="#" class="btn btnD1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Read More</a>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="blog" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="offset-sm-2 col-sm-8">
+                    <div class="headerText text-center">
+                        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Our Latest Posts</h2>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores provident unde facilis. Temporibus perspiciatis quam quisquam ut vitae iure sapiente culpa facere deserunt id minima, eos eius consectetur assumenda blanditiis?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="blogpost" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                        <div class="imgBx">
+                            <img src="imgs/b1.jpg" class="img-fluid">
+                        </div>
+                        <div class="content">
+                            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae est ullam! Ratione tenetur molestias illum quia accusamus, ipsam distinctio, saepe eum aperiam alias quam. Tenetur quam nemo quisquam dolorem!</p>
+                            <a href="#" class="btn btnD2">Read More</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="blogpost">
+                        <div class="imgBx">
+                            <img src="imgs/b2.jpg" class="img-fluid">
+                        </div>
+                        <div class="content">
+                            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae est ullam! Ratione tenetur molestias illum quia accusamus, ipsam distinctio, saepe eum aperiam alias quam. Tenetur quam nemo quisquam dolorem!</p>
+                            <a href="#" class="btn btnD2">Read More</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                    <div class="blogpost">
+                        <div class="imgBx">
+                            <img src="imgs/b3.jpg" class="img-fluid">
+                        </div>
+                        <div class="content">
+                            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae est ullam! Ratione tenetur molestias illum quia accusamus, ipsam distinctio, saepe eum aperiam alias quam. Tenetur quam nemo quisquam dolorem!</p>
+                            <a href="#" class="btn btnD2">Read More</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="blogpost" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="imgBx">
+                            <img src="imgs/b4.jpg" class="img-fluid">
+                        </div>
+                        <div class="content">
+                            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae est ullam! Ratione tenetur molestias illum quia accusamus, ipsam distinctio, saepe eum aperiam alias quam. Tenetur quam nemo quisquam dolorem!</p>
+                            <a href="#" class="btn btnD2">Read More</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="headerText text-center">
+                            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Contact Us</h2>
+                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="offset-sm-2 col-sm-8">
+                    <form data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="">Phone</label>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="">Message</label>
+                            <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <button class="btn btnD1">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://plus.google.com/"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+                <p class="cpryt">
+                    <a href="#">&copy; Copyright 2023 Nature | Design by Abaan Ali</a>
+                </p>
+            </div>
+        </div>
+      </footer>
+
+
+
+
+<script src="./jquery-3.6.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<script type="text/javascript">
+    $(document).scroll(function(){
+        $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+    })
+</script>
+
+</body>
+</html>
