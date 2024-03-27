@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<!-- BOOTSTRAP BUILTIN LINKS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- BOOTSTRAP BUILTIN LINKS -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+
+  .title{
+    margin-bottom: 5vh;
+}
+.card{
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+}
+@media(max-width:767px){
+    .card{
+        margin: 3vh auto;
+    }
+}
+.cart{
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+@media(max-width:767px){
+    .cart{
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+}
+.summary{
+    background-color: #ddd;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+}
+@media(max-width:767px){
+    .summary{
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 1rem;
+    }
+}
+.summary .col-2{
+    padding: 0;
+}
+.summary .col-10
+{
+    padding: 0;
+}.row{
+    margin: 0;
+}
+.title b{
+    font-size: 1.5rem;
+}
+.main{
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+}
+.col-2, .col{
+    padding: 0 1vh;
+}
+a{
+    padding: 0 1vh;
+}
+.close{
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+img{
+    width: 3.5rem;
+}
+.back-to-shop{
+    margin-top: 4.5rem;
+}
+h5{
+    margin-top: 4vh;
+}
+hr{
+    margin-top: 1.25rem;
+}
+form{
+    padding: 2vh 0;
+}
+select{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+input{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+input:focus::-webkit-input-placeholder
+{
+      color:transparent;
+}
+
+a{
+    color: black; 
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+ #code{
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+</style>
+
+<title>Products | Vintage Store</title>
+</head>
+<body>
+    <a id="button"></a>
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="assets/images/logo vs.png" width="80px" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="" id="navbarNav"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav text-uppercase mx-auto fw-bold">
+          <li class="nav-item me-4">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav text-uppercase  fw-bold">
+            <li class="nav-item me-4">
+                <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li class="nav-item me-4">
+                <a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+<!-- HEADER -->
+
+
+<section>
+
+  <div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                    <div class="col align-self-center text-right text-muted">3 items</div>
+                </div>
+            </div>    
+            <div class="row border-top border-bottom">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="assets/images/products/p8.png"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&dollar; 44.00 <span class="close">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="assets/images/products/p2.png"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&dollar; 44.00 <span class="close">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="row border-top border-bottom">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="assets/images/products/p1.png"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&dollar; 44.00 <span class="close">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="back-to-shop"><a href="products.html" style="text-decoration: none;">&leftarrow;<span class="text-muted">Back to shop</span></a></div>
+        </div>
+        <div class="col-md-4 summary">
+            <div><h5><b>Summary</b></h5></div>
+            <hr>
+            <div class="row">
+                <div class="col" style="padding-left:0;">ITEMS 3</div>
+                <div class="col text-right">&dollar; 132.00</div>
+            </div>
+            <form>
+                <p>SHIPPING</p>
+                <select><option class="text-muted">Standard-Delivery- &dollar;5.00</option></select>
+                <p>GIVE CODE</p>
+                <input id="code" placeholder="Enter your code">
+            </form>
+            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                <div class="col">TOTAL PRICE</div>
+                <div class="col text-right">&euro; 137.00</div>
+            </div>
+            <button class="btn btn-custom">CHECKOUT</button>
+        </div>
+    </div>
+    
+  </div>
+
+</section>
+
+
+
+<footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4">
+              <img src="assets/images/logo vs.png" width="150px" class="logo">
+          </div>
+          <div class="col-md-2">
+            <h5 class="">MENU</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Product</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="">Account</h5>
+            <ul class="list-unstyled">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="about.html">Privacy & Policy</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="">Contact</h5>
+            <ul class="list-unstyled">
+              <li>Address:<a href="contact.html"> Karachi Pakistan</a></li>
+              <li>Email:<a href="contact.html"> info@vintagestore.com</a></li>
+              <li>Phone:<a href="contact.html"> +92 00000000</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom py-3">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-12 text-white">
+            &copy; 2023 copyright, Design by: <a href="abaanaliportfolio.000webhostapp.com" class="text-white" style="text-decoration: none;">Aban Ali</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

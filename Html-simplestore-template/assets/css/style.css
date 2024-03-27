@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+:root{
+    --primary: #3d5d52;
+    --dark: #352e28;
+    --body: #d3b8a5;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+h1{
+    color: var(--primary);
+}
+
+a{
+    color: var(--primary);
+}
+
+section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+nav{
+    height: 100px;
+    font-size: large;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: var(--primary);
+}
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--dark);
+}
+
+.btn-custom{
+    background-color: var(--primary);
+    color: #fff;
+}
+.btn-custom:hover{
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-custom-1{
+    border: 1px solid var(--primary);
+    color: var(--dark);
+}
+.btn-custom-1:hover{
+    background-color: var(--dark);
+    color: #fff;
+}
+
+/* CARDS DESIGN */
+
+.why-shop{
+    background-color: var(--primary);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.product{
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+.product img{
+    width: 180px;
+}
+
+
+.footer-top{
+    padding-bottom: 90px;
+    padding: 90px;
+    background-color: var(--body);
+  }
+  
+  .footer-top a{
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .footer-top a:hover{
+    color: var(--dark);
+  }
+  
+  .footer-bottom{
+    background-color: var(--dark);
+  }
+
+
+/* TOP BUTTON */
+
+#button {
+    display: inline-block;
+    background-color: var(--primary);
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: var(--dark);
+  }
+  #button:active {
+    background-color: var(--body);
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
