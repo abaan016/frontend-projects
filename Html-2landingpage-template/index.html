@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Kreative</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap');
+
+:root{
+  --primary:#0d6efd;
+  --dark: #21252f;
+  --body: #888;
+  --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+body{
+  font-family: Sora, "sans-serif";
+  line-height: 1.7;
+  color: var(--body);
+}
+
+h1,h2,h3,h4,h5,h6,
+.display{
+  color: var(--dark);
+  font-weight: 700;
+}
+
+a{
+  color: var(--dark);
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+}
+
+.navbar{
+  box-shadow: var(--box-shadow);
+}
+
+.logo{
+  width: 150px;
+}
+
+.navbar .nav-link{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn{
+  padding: 14px 18px;
+  border-width: 2px;
+  border-radius: 0;
+}
+
+.hero{
+  background-image: url(imgs/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 20, 51, 0.8);
+  z-index: -1;
+}
+
+section{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.card-effect{
+  box-shadow: var(--box-shadow);
+  background-color: #fff;
+  padding: 20px;
+  transition: all 0.35s ease;
+}
+
+.card-effect:hover{
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.iconbox{
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 32px;
+  border-radius: 100px;
+  flex: none;
+}
+
+.service{
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.service::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--primary);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service:hover .iconbox{
+  background-color: var(--primary);
+  color: #fff;
+}
+
+
+.service:hover h5,
+.service:hover p{
+  color: #fff;
+}
+
+.service:hover::after{
+  opacity: 1;
+  top: 0;
+}
+
+.col-img{
+  background-image: url(imgs/picme.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+}
+
+.project
+    {
+        position: relative;
+        overflow: hidden;
+    }
+    .project .overlay 
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(21,20 ,51 ,0.8);
+        padding: 30px;
+        display: flex;
+        align-items: flex-end;
+        transition: all 0.4s ease;
+        opacity: 0;
+    }
+    .project img 
+    {
+        transition: all 0.4s ease;
+    }
+    .project:hover .overlay
+    {
+        opacity: 1;
+    }
+    .project:hover img
+    {
+        transform: scale(1.1);
+    }
+
+.pricing i{
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.pricing ul li{
+  margin-top: 8px;
+}
+
+
+
+.team-member img{
+  width: 125px;
+  height: 125px;
+  border-radius: 100px;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a{
+  width: 34px;
+  height: 34px;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-left: 5px;
+  transition: all 0.4s ease;
+}
+
+.social-icons a:hover{
+  color: var(--primary);
+  background-color: transparent;
+  border-color: var(--primary);
+}
+
+form input.form-control{
+  height: 56px;
+}
+
+form .form-control{
+  border: transparent;
+  border-radius: 0;
+  background-color: rgba(0,0,0,0.02);
+}
+
+.footer-top{
+  padding-bottom: 90px;
+  padding: 90px;
+  background-color: var(--dark);
+}
+
+.footer-top a{
+  color: var(--body);
+}
+
+.footer-top a:hover{
+  color: #fff;
+}
+
+.footer-bottom{
+  background-color: #242933;
+}
+
+
+
+
+</style>
+
+
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+        <div class="container">
+          <a class="navbar-brand " href="#"><img src="imgs/logo.png" class="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#feature">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              
+            </ul>
+            <button class="btn btn-primary ms-lg-3">Join us</button>
+          </div>
+        </div>
+      </nav>  
+      <!-- //NAVBAR -->
+
+
+      <!-- HERO -->
+      <div class="hero vh-100 d-flex align-items-center" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto text-center">
+                    <h1 class="display-4 text-white">Build robust landing pages now</h1>
+                    <p class="text-white my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Libero nobis perspiciatis omnis optio atque aliquam dolorem 
+                    aut error Nemo sunt.</p>
+                    <a href="#" class="btn me-2 btn-primary">Get Started</a>
+                    <a href="#" class="btn btn-outline-light">My Portfolio</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- HERO END -->
+
+      <!-- SERVICES -->
+      <section  id="services">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">SERVICES</h6>
+              <h1>Our Services</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quos excepturi dignissimos, labore molestiae facere nam odit.</p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4 col-sm-6 service">
+              <div class="service card-effect">
+                <div class="iconbox">
+                  <i class='bx bx-code-alt'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis illum soluta velit voluptas labore libero.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="service card-effect">
+                <div class="iconbox">
+                  <i class='bx bxs-comment-detail'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis illum soluta velit voluptas labore libero.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="service card-effect">
+                <div class="iconbox">
+                  <i class='bx bxs-cog'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis illum soluta velit voluptas labore libero.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="service card-effect">
+                <div class="iconbox">
+                  <i class='bx bxs-heart'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis illum soluta velit voluptas labore libero.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="service card-effect">
+                <div class="iconbox">
+                  <i class='bx bxs-rocket'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis illum soluta velit voluptas labore libero.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="service card-effect">
+                <div class="iconbox">
+                  <i class='bx bxs-check-shield'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis illum soluta velit voluptas labore libero.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- SERVICES END -->
+
+      <!-- FEATURE -->
+      <section class="row w-100 py-0 bg-light" id="feature">
+        <div class="col-lg-6 col-img"></div>
+        <div class="col-lg-6">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <h6 class="text-primary">Why To Choose us?</h6>
+              <h1>Best solution for your business</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quos excepturi dignissimos, labore molestiae facere nam odit.</p>
+              
+              <div class="feature d-flex">
+                <div class="iconbox me-3">
+                  <i class='fa-sharp fa-solid fa-pen-nib'></i>
+                </div>
+                <div>
+                  <h5>Feature</h5>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="feature d-flex">
+                <div class="iconbox me-3">
+                  <i class='fa-solid fa-laptop'></i>
+                </div>
+                <div>
+                  <h5>Feature</h5>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="feature d-flex">
+                <div class="iconbox me-3">
+                  <i class='fa-brands fa-wordpress'></i>
+                </div>
+                <div>
+                  <h5>Feature</h5>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+            
+
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FEATURE END -->
+
+      <!-- PROJECTS -->
+      <section id="portfolio" >
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center project">
+                    <h6 class="text-primary">PROJECTS</h6>
+                    <h1>Our Recent Work</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, rem repellat? Minima itaque quaerat consectetur, suscipit doloremque sit, repellendus veritatis excepturi fuga ullam explicabo obcaecati facilis in, animi impedit repudiandae.</p>
+                </div>
+            </div> 
+            <div class="row g-3">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project">
+                        <img src="imgs/pro11.jpg" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Project Title</h4>
+                                <h6 class="text-white">Website Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project">
+                        <img src="imgs/pro2.jpg" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Project Title</h4>
+                                <h6 class="text-white">Website Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project">
+                        <img src="imgs/pro3.jpg" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Project Title</h4>
+                                <h6 class="text-white">Website Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project">
+                        <img src="imgs/pro4.jpg" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Project Title</h4>
+                                <h6 class="text-white">Website Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project">
+                        <img src="imgs/pro5.jpg" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Project Title</h4>
+                                <h6 class="text-white">Website Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project">
+                        <img src="imgs/pro6.jpg" alt="">
+                        <div class="overlay">
+                            <div>
+                                <h4 class="text-white">Project Title</h4>
+                                <h6 class="text-white">Website Design</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    <!-- PROJECT ENDS-->
+
+      <!-- PRICING -->
+      <section id="pricing" class="bg-light">
+        <div class="container">
+          <div class="row mb-5 g-4">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">PRICING</h6>
+              <h1>Our Fair & Simple Pricing</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quos excepturi dignissimos, labore molestiae facere nam odit.</p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 text-center">
+              <div class="pricing card-effect">
+                <h6>STARTER</h6>
+                <h1>$99</h1>
+                <hr>
+                <ul class="list-unstyled">
+                  <li><i class='bx bxs-check-circle'></i>
+                  Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                    Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                    Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                     Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                   Premium Support</li>
+                </ul>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center">
+              <div class="pricing card-effect">
+                <h6>STARTUP</h6>
+                <h1>$199</h1>
+                <hr>
+                <ul class="list-unstyled">
+                  <li><i class='bx bxs-check-circle'></i>
+                  Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                    Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                    Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                     Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                   Premium Support</li>
+                </ul>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center">
+              <div class="pricing card-effect">
+                <h6>COMPONY</h6>
+                <h1>$299</h1>
+                <hr>
+                <ul class="list-unstyled">
+                  <li><i class='bx bxs-check-circle'></i>
+                  Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                    Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                    Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                     Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                   Premium Support</li>
+                </ul>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="pricing card-effect text-center">
+                <h6>ORG</h6>
+                <h1>$399</h1>
+                <hr>
+                <ul class="list-unstyled">
+                  <li><i class='bx bxs-check-circle'></i>
+                  Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                    Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                    Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                     Premium Support</li>
+                  <li><i class='bx bxs-check-circle'></i>
+                   Premium Support</li>
+                </ul>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+            </div>
+          </div>
+        
+      </section><!-- PRICING END -->
+
+      <!-- TEAM -->
+      <section id="Team">
+        <div class="container">
+          <div class="row mb-5 ">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">TEAM</h6>
+              <h1>Meet Our Crew Members</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quos excepturi dignissimos, labore molestiae facere nam odit.</p>
+            </div>
+          </div>
+          <div class="row text-center g-4">
+            <div class="col-lg-3 col-sm-6">
+              <div class="team-member card-effect">
+                <img src="imgs/team01.jpg">
+                <h5 class="mb-0 mt-4">Name</h5>
+                <P>Web Designer</P>
+                <div class="social-icons">
+                  <a href="#"><i class='bx bxl-facebook'></i></a>
+                  <a href="#"><i class='bx bxl-twitter'></i></a>
+                  <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="team-member card-effect">
+                <img src="imgs/team2.jpg">
+                <h5 class="mb-0 mt-4">Name</h5>
+                <P>Web Designer</P>
+                <div class="social-icons">
+                  <a href="#"><i class='bx bxl-facebook'></i></a>
+                  <a href="#"><i class='bx bxl-twitter'></i></a>
+                  <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="team-member card-effect">
+                <img src="imgs/team3.jpg">
+                <h5 class="mb-0 mt-4">Name</h5>
+                <P>Web Designer</P>
+                <div class="social-icons">
+                  <a href="#"><i class='bx bxl-facebook'></i></a>
+                  <a href="#"><i class='bx bxl-twitter'></i></a>
+                  <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="team-member card-effect">
+                <img src="imgs/team4.jpg">
+                <h5 class="mb-0 mt-4">Name</h5>
+                <P>Web Designer</P>
+                <div class="social-icons">
+                  <a href="#"><i class='bx bxl-facebook'></i></a>
+                  <a href="#"><i class='bx bxl-twitter'></i></a>
+                  <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section><!-- TEAM END -->
+
+
+      <!-- BLOG -->
+      <section id="Blog" class="bg-light">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">Blog</h6>
+              <h1>Latest news from the blog</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quos excepturi dignissimos, labore molestiae facere nam odit.</p>
+            </div>
+          </div>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="blog-post card-effect">
+                  <img src="imgs/b1.jpg">
+                  <h5><a class="mt-4" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing</a></h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam similique eos repudiandae ea ipsam? Ullam.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="blog-post card-effect">
+                  <img src="imgs/b2.jpg">
+                  <h5><a class="mt-4" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing</a></h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam similique eos repudiandae ea ipsam? Ullam.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="blog-post card-effect">
+                  <img src="imgs/b3.jpg">
+                  <h5><a class="mt-4" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing</a></h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam similique eos repudiandae ea ipsam? Ullam.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+      </section><!-- BLOG END -->
+
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">CONTACT</h6>
+              <h1>Get In Touch</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quos excepturi dignissimos, labore molestiae facere nam odit.</p>
+            </div>
+          </div>
+            <form class="row g-3 justify-content-center">
+              <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Full Name">
+              </div>
+              <div class="col-md-5">
+                <input type="email" class="form-control" placeholder="Enter E-mail">
+              </div>
+              <div class="col-md-10">
+                <input type="text" class="form-control" placeholder="Enter Subject">
+              </div>
+              <div class="col-md-10">
+                <textarea  name="" id="" cols="30" rows="5" class="form-control w-100" placeholder="Enter Message"></textarea>
+              </div>
+              <div class="col-md-10 d-grid">
+                <button class="btn btn-primary">Contact</button>
+              </div>
+            </form>
+        </div>  
+      </section>
+      <!-- CONTACT END -->
+
+      <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="row gy-4">
+              <div class="col-md-4">
+                  <img src="imgs/logowhite.png" class="logo">
+              </div>
+              <div class="col-md-2">
+                <h5 class="text-white">Brand</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Career</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+              </div>
+              <div class="col-md-2">
+                <h5 class="text-white">More</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">FAQ'S</a></li>
+                  <li><a href="#">Privacy & Policy</a></li>
+                  <li><a href="#">Warrenty</a></li>
+                  <li><a href="#">Shipments</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5 class="text-white">Contact</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Address:</a></li>
+                  <li><a href="#">Email:</a></li>
+                  <li><a href="#">Phone:</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom py-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                &copy; 2023 copyright all rights reserved
+              </div>
+              <div class="col-md-6">
+                <div class="social-icons">
+                  <a href="#"><i class='bx bxl-facebook'></i></a>
+                  <a href="#"><i class='bx bxl-twitter'></i></a>
+                  <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>
