@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>calculator</title>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Simple Calculator</h4>
+                    </div>
+                    <div class="card-body">
+                        <input type="text" id="display" class="form-control mb-2" disabled>
+                        <div class="row mb-2">
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('1')">1</button></div>
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('2')">2</button></div>
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('3')">3</button></div>
+                            <div class="col-3"><button class="btn btn-warning btn-block" onclick="appendOperator('+')">+</button></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('4')">4</button></div>
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('5')">5</button></div>
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('6')">6</button></div>
+                            <div class="col-3"><button class="btn btn-warning btn-block" onclick="appendOperator('-')">-</button></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('7')">7</button></div>
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('8')">8</button></div>
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('9')">9</button></div>
+                            <div class="col-3"><button class="btn btn-warning btn-block" onclick="appendOperator('*')">x</button></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3"><button class="btn btn-danger btn-block" onclick="clearDisplay()">C</button></div>
+                            <div class="col-3"><button class="btn btn-primary btn-block" onclick="appendNumber('0')">0</button></div>
+                            <div class="col-3"><button class="btn btn-success btn-block" onclick="calculate()">=</button></div>
+                            <div class="col-3"><button class="btn btn-warning btn-block" onclick="appendOperator('/')">/</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<script src="cal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
